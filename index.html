@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f0f0f0;
+    }
+
+    #contador {
+      font-size: 48px;
+      margin: 20px;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contador</h1>
+
+  <button onclick="diminuir()">-</button>
+  <span id="contador">0</span>
+  <button onclick="aumentar()">+</button>
+
+  <script>
+    let numero = 0;
+    const contadorElemento = document.getElementById('contador');
+
+    function aumentar() {
+      numero++;
+      contadorElemento.textContent = numero;
+    }
+
+    function diminuir() {
+      numero--;
+      contadorElemento.textContent = numero;
+    }
+  </script>
+
+</body>
+</html>
